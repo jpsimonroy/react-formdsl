@@ -1,7 +1,6 @@
 var React = require('react');
 var FormFieldFactory = require('./form_field_factory.jsx');
 var Section = require('./section.jsx');
-var AppDefaults = require('./../../app_defaults');
 
 var Container = React.createClass({
 	render: function(){

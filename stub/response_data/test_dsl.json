@@ -1,0 +1,28 @@
+{
+  "local": {},
+  "definitions": [{
+    "id": "customer_name",
+    "label": "Customer Name",
+    "type": "text",
+    "state": "on",
+    "tag": "Details"
+  }, {
+    "id": "customer_description",
+    "label": "Describe your referrals business",
+    "type": "text",
+    "state": "on",
+    "tag": "Details"
+  }, {
+    "id": "customer_interest",
+    "label": "In your knowledge what products is your referral interested in?",
+    "type": "text",
+    "state": "on",
+    "tag": "Details"
+  }, {
+    "id": "referral_contact",
+    "label": "Phone / Email of your referral.",
+    "type": "text",
+    "state": "on",
+    "tag": "Details"
+  }]
+}

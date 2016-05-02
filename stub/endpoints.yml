@@ -1,0 +1,9 @@
+---
+-  request:
+      url: ^/services/basic$
+      method: GET
+   response:
+      headers:
+        Content-Type: application/json
+      status: 200
+      file: response_data/test_dsl.json
