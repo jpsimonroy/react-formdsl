@@ -67,7 +67,5 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('build_local', ['clean', 'sass', 'browserify']);
-
   grunt.registerTask('default', ['clean', 'sass', 'browserify', 'watch']);
-
 }
