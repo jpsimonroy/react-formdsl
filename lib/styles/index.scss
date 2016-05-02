@@ -1,0 +1,76 @@
+$preview-icon-color: #d5d5d5;
+$white: #f5f5f5;
+$darker-gray: #616161;
+$light-gray-text: #989898;
+$black: #000;
+$error: #e53935;
+$green: #008000;
+$warning: #9f6000;
+$placeholderColor: #9f9f9f;
+@import './autocomplete';
+.form-group {
+  input[type='text'].form-control{
+    padding: 0;
+    float: none;
+    border: 0;
+    box-shadow: none;
+    border-radius: 0;
+    background: transparent;
+    border-bottom: 1px solid #757575;
+  }
+}
+input[type='text'],
+input[type='number'],
+input[type='password'],
+input[type='date'],
+input[type='datetime-local'] {
+  font-size: 1.2rem;
+  height: 1.75rem;
+  border-style: none;
+}
+textarea {
+  font-size: 1.2rem;
+}
+.form-group {
+  input[type='text'],
+  input[type='number'],
+  input[type='password'],
+  input[type='date'],
+  input[type='datetime-local'],
+  textarea {
+    border: 1px solid $light-gray-text;
+    border-radius: 5px;
+    padding-left: 0.3rem;
+  }
+}
+input[type='checkbox'],
+input[type='radio'] {
+  zoom: 1.35;
+}
+select.mdl-textfield__input,
+label {
+  font-size: 1.2rem;
+  height: 1.75rem;
+}
+select.mdl-textfield__input {
+  text-transform: capitalize !important;
+  height: 2.5rem;
+}
+.take-action {
+  -webkit-overflow-scrolling: touch !important;
+}
+select:focus {
+  outline: none;
+}
+.validation {
+  font-size: 0.8rem;
+  color: $light-gray-text;
+  margin-top: 5px;
+  i {
+    color: $error;
+    font-size: 1rem;
+  };
+  .validation-msg {
+    margin-left: 5px;
+  }
+}
