@@ -1,0 +1,10 @@
+{
+  "name": "Sample",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap-sass-official": "3.3.3",
+    "material-design-lite": "1.0.5",
+    "svg-loaders": "1.0.1",
+    "font-awesome": "4.4.0"
+  }
+}
