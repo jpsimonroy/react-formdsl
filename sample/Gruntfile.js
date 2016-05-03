@@ -79,7 +79,7 @@ module.exports = function(grunt) {
         dest: 'www/index.js',
         options: {
           watch: true,
-          transform: ['babelify', 'envify']
+          transform: ['envify', ["babelify", { "plugins": ["transform-react-jsx"] }]]
         }
       }
     },

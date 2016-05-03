@@ -1,1 +1,74 @@
+$preview-icon-color: #d5d5d5;
+$white: #f5f5f5;
+$darker-gray: #616161;
+$light-gray-text: #989898;
+$black: #000;
+$error: #e53935;
+$green: #008000;
+$warning: #9f6000;
+$placeholderColor: #9f9f9f;
 @import './../../../lib/styles/index';
+@import '../bootstrap-sass-official/assets/stylesheets/bootstrap';
+@import '../material-design-lite/src/material-design-lite';
+@import '../material-design-lite/src/material-design-lite-grid';
+@import '../font-awesome/scss/font-awesome';
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,100,300,400,800);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
+html,
+body,
+#app,
+#content {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+html{
+  user-select: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+}
+body {
+  font-size: $font-size-base;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  font-family: "Roboto Condensed";
+};
+.mdl-loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  img {
+    position: absolute;
+    z-index: 9999;
+    width: 4rem;
+    height: 4rem;
+    top: 50%;
+    left: 50%;
+    margin: -2rem 0 0 -2rem;
+    &.small {
+      width: 2rem;
+      height: 2rem;
+      margin: -1rem 0 0 -1rem;
+    }
+  }
+}

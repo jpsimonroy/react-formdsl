@@ -19,7 +19,8 @@ var ModelMux = {
             return;
         }
         this.setState(_.defaults(muxedState, this.state));
-      }.bind(this);
+      };
+      handler = handler.bind(this);
       window.BUS.on(`${Events.models.changed}::${l}`, handler);
       return {
         handler: handler,

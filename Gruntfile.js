@@ -35,7 +35,7 @@ module.exports = function(grunt) {
         dest: 'www/index.js',
         options: {
           watch: true,
-          transform: ['babelify']
+          transform: [["babelify", { "plugins": ["transform-react-jsx"] }]]
         }
       }
     },
