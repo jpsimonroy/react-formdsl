@@ -7,20 +7,20 @@ var StateFusion = require('./../../../../lib/index').StateFusion;
 var Actionable = require('./actionable');
 var Deferrable = require('./../../lib/models/services/deferrable');
 var AppDefaults = require('./../../lib/app_defaults');
-var ModelMux = require('./../../context/modelmux');
+var ModelMux = require('./../../context/model_mux');
 
 var Basic = class extends ModelMux {
   constructor(eventBus) {
     super();
     this.eventBus = eventBus;
-    this.identifier = 'settings';
+    this.identifier = 'basic';
     this.eventBus.on(`${this.eventIdentifier()}::actionable`, evt => this.iAmChanged());
     this.reset();
     _.extend(this, Deferrable(Basic, true, true), Actionable, StateFusion());
   }
   reset() {
     this.actionable = new FormStateMachine('/services/basic', '/services/basic',
-      'basic', null, this, `${this.eventIdentifier()}::actionable`);
+       null, this, `${this.eventIdentifier()}::actionable`);
     this.actionable._flushCache();
     this.state = this.emptyState();
     this.immutableState = Immutable.fromJS(this.state);

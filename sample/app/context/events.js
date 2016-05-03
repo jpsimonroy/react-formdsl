@@ -1,4 +1,4 @@
-var App = {
+ var App = {
   events: {
     initComplete: 'app::initComplete',
     goBack: 'app::goBack',
@@ -14,7 +14,7 @@ var App = {
       initNew: 'app::basic::initTakeAction(none)',
       autoSave: 'app::basic::autoSave::takeAction(element|value)',
       takeAction: 'app::basic::take_action(none)'
-    }
+    },
     models: {
       changed: 'app::models_changed',
       reset: 'app::models::reset'

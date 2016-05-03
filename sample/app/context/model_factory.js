@@ -1,6 +1,6 @@
 var Basic = require('./../basic/models/basic');
+var BasicListeners = require('./../basic/models/listeners');
 module.exports = function(localStorage, eventBus, registry) {
-  var loginModel = new Login(eventBus, localStorage);
   registry.models = {
     basic: new Basic(eventBus, localStorage)
   };

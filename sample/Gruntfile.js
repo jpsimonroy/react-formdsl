@@ -43,22 +43,8 @@ module.exports = function(grunt) {
         dest: 'www/index.html'
       },
       svgLoaders: {
-        src: 'app/images/svg-loaders/puff.svg',
+        src: 'app/images/svg_loaders/puff.svg',
         dest: 'www/svg_loaders/puff.svg',
-        filter: 'isFile'
-      },
-      images: {
-        expand: true,
-        flatten: true,
-        src: 'app/images/*',
-        dest: 'www/images/',
-        filter: 'isFile'
-      },
-      mapImages: {
-        expand: true,
-        flatten: true,
-        src: 'node_modules/leaflet/dist/images/*',
-        dest: 'www/images/',
         filter: 'isFile'
       },
       glyphicons: {

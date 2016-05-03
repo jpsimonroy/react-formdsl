@@ -14,8 +14,6 @@
   "author": "Simon Roy",
   "license": "ISC",
   "dependencies": {
-    "babel-register": "^6.7.2",
-    "babelify": "^7.3.0",
     "classnames": "^2.2.4",
     "immutable": "^3.7.6",
     "jquery": "2.1.4",
@@ -25,9 +23,12 @@
     "react-dom": "^0.14.8",
     "react-icon-rating": "^0.2.0",
     "react-select": "0.4.8",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "underscore.string": "3.0.3"
   },
   "devDependencies": {
+    "babel-register": "^6.7.2",
+    "babelify": "^7.3.0",
     "babel-plugin-transform-react-jsx": "^6.7.5",
     "load-grunt-tasks": "^3.5.0",
     "grunt": "^1.0.1",
