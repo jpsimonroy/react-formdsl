@@ -19,24 +19,13 @@ module.exports = function(grunt) {
     },
 
     clean: {
-      build: ['www']
+      build: ['dist']
     },
 
     sass: {
       dist: {
         src: 'lib/styles/index.scss',
-        dest: 'www/styles/index.css'
-      }
-    },
-
-    browserify: {
-      dist: {
-        src: 'lib/index.js',
-        dest: 'www/index.js',
-        options: {
-          watch: true,
-          transform: [["babelify", { "plugins": ["transform-react-jsx"] }]]
-        }
+        dest: 'dist/styles/index.css'
       }
     },
 
@@ -46,6 +35,9 @@ module.exports = function(grunt) {
       },
       mocha: {
         command: './node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha'
+      },
+      dist: {
+        command: '$(npm bin)/babel lib --presets babel-preset-es2015 --plugins transform-react-jsx --out-dir dist'
       }
     },
 
@@ -56,7 +48,7 @@ module.exports = function(grunt) {
       },
       js: {
         files: ['lib/**/*.js', 'lib/**/*.jsx'],
-        tasks: ['browserify']
+        tasks: ['shell:dist']
       },
       css: {
         files: ['lib/**/*.scss'],
@@ -66,6 +58,6 @@ module.exports = function(grunt) {
 
   });
 
-  grunt.registerTask('build_local', ['clean', 'sass', 'browserify']);
-  grunt.registerTask('default', ['clean', 'sass', 'browserify', 'watch']);
+  grunt.registerTask('build_local', ['clean', 'sass', 'shell:dist']);
+  grunt.registerTask('default', ['clean', 'sass', 'watch']);
 }
