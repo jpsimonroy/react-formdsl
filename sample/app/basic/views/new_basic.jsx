@@ -5,17 +5,24 @@ var Container = require('./../../../../lib/index').Container;
 var Events = require('./../../context/events').events;
 var _ = require('underscore');
 var Immutable = require('immutable');
+var classnames = require('classnames');
 var NewBasic = React.createClass({
 	mixins: [ModelMux],
   withModels: ["basic"],
 	componentDidMount: function(){
 		window.BUS.trigger(Events.basic.initNew);
 	},
+	save: function(){
+		window.BUS.trigger(Events.basic.takeAction);
+	},
 	render: function(){
 		var body = <div/>;
 		var loading = this.state.basic ? this.state.basic.get("digest").get("actionable").get('loading') : false;
 		var actionable = this.state.basic ? this.state.basic.get('digest').get('actionable') : null;
-		debugger;
+		var disabled = actionable ? (!actionable.get('validations').get('model') || loading) : true;
+		var saveEnabled = classnames({
+			'disabled': disabled
+		});
 		if(actionable){
 			body = (<Container key='dummy_basic'
 								eventRoot={this.props.eventRoot}
@@ -31,6 +38,9 @@ var NewBasic = React.createClass({
             <Loader/>
           </div>
 					{body}
+					<i className={`fa fa-save ${saveEnabled}`}
+							style={{fontSize: '2rem', margin: '0 0.2rem 0 1rem'}} onClick={this.save}/>
+					<span className={saveEnabled} style={{fontSize: '1.5rem'}} onClick={this.save}>Save</span>
 				</div>
 			</div>);
 	}

@@ -76,6 +76,12 @@ input[type='datetime-local'] {
 textarea {
   font-size: 1.2rem;
 }
+
+.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
 .form-group {
   input[type='text'],
   input[type='number'],

@@ -15,7 +15,7 @@ var BasicActionable = {
     }, null);
   },
   takeAction: function() {
-    this.actionable.takeAction(null, null, this.withSubState.bind(this), null, this.onActionTakenSuccess.bind(this));
+    this.actionable.takeAction(null, this.withSubState.bind(this), null, this.onActionTakenSuccess.bind(this));
   },
   initBasic: function() {
     this.actionable.init(null, null, this.eventBus, this.withSubState.bind(this));
