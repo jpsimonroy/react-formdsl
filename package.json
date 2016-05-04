@@ -1,6 +1,6 @@
 {
   "name": "react-formdsl",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A declarative forms generation library for the mobile with react js",
   "main": "./dist/index.js",
   "keywords": [

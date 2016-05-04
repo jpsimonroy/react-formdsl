@@ -45,6 +45,13 @@ textarea {
     padding-left: 0.3rem;
   }
 }
+input[type=radio] {
+  margin: 0 5px;
+}
+.option-text {
+  font-weight: normal;
+  display: inline-block;
+}
 input[type='checkbox'],
 input[type='radio'] {
   zoom: 1.35;

@@ -7,11 +7,11 @@ $error: #e53935;
 $green: #008000;
 $warning: #9f6000;
 $placeholderColor: #9f9f9f;
-@import './../../../lib/styles/index';
 @import '../bootstrap-sass-official/assets/stylesheets/bootstrap';
 @import '../material-design-lite/src/material-design-lite';
 @import '../material-design-lite/src/material-design-lite-grid';
 @import '../font-awesome/scss/font-awesome';
+@import './../../../lib/styles/index';
 @import url(http://fonts.googleapis.com/css?family=Roboto:500,100,300,400,800);
 @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
 html,

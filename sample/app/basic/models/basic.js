@@ -19,7 +19,7 @@ var Basic = class extends ModelMux {
     _.extend(this, Deferrable(Basic, true, true), Actionable, StateFusion());
   }
   reset() {
-    this.actionable = new FormStateMachine('/services/basic', '/services/basic',
+    this.actionable = new FormStateMachine('/services/ticket_system', '/services/ticket_system',
        null, this, `${this.eventIdentifier()}::actionable`);
     this.actionable._flushCache();
     this.state = this.emptyState();
