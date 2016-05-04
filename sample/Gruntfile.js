@@ -94,7 +94,7 @@ module.exports = function(grunt) {
     },
     env: {
       local: {
-          API_CONTEXT_URI: "http:\\/\\/" + lookupIpAddress + ":4557"
+          API_CONTEXT_URI: "http://" + lookupIpAddress + ":4557"
       },
     },
 
