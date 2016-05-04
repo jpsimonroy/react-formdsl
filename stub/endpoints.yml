@@ -7,3 +7,11 @@
         Content-Type: application/json
       status: 200
       file: response_data/test_dsl.json
+-  request:
+      url: ^/services/ticket_system$
+      method: GET
+   response:
+      headers:
+        Content-Type: application/json
+      status: 200
+      file: response_data/ticket_system.json

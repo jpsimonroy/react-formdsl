@@ -1,0 +1,90 @@
+{
+  "local": {
+    "cancelledBy": [{
+      "id": 1,
+      "name": "End User"
+    }, {
+      "id": 2,
+      "name": "Self"
+    }],
+    "status": [{
+      "id": 1,
+      "name": "Pending"
+    }, {
+      "id": 2,
+      "name": "Cancelled"
+    }, {
+      "id": 3,
+      "name": "Completed"
+    }]
+  },
+  "definitions": [{
+    "id": "ticket_summary",
+    "label": "Summary",
+    "type": "text",
+    "state": "on",
+    "tag": "Details"
+  }, {
+    "id": "ticket_description",
+    "label": "Describe your issue",
+    "type": "text",
+    "state": "on",
+    "tag": "Details"
+  }, {
+    "id": "status",
+    "label": "Status",
+    "type": "local",
+    "lookup": "status",
+    "options": "radio",
+    "state": "on",
+    "tag": "Details",
+    "transitions": [{
+      "type": "state",
+      "state": "on",
+      "onValue": [
+        "2"
+      ],
+      "target": [
+        "cancelled_by"
+      ]
+    }, {
+      "type": "state",
+      "state": "on",
+      "onValue": [
+        "3"
+      ],
+      "target": [
+        "completion_remarks"
+      ]
+    }]
+  }, {
+    "id": "completion_remarks",
+    "label": "Any Completion Remarks",
+    "type": "text",
+    "state": "off",
+    "tag": "Closure"
+  }, {
+    "id": "cancelled_by",
+    "label": "Cancelled By",
+    "type": "local",
+    "lookup": "cancelledBy",
+    "state": "off",
+    "tag": "Cancellation",
+    "transitions": [{
+      "type": "state",
+      "state": "on",
+      "onValue": [
+        "2"
+      ],
+      "target": [
+        "cancelled_comments"
+      ]
+    }]
+  }, {
+    "id": "cancelled_comments",
+    "label": "Cancellation Reasons",
+    "type": "text",
+    "state": "off",
+    "tag": "Cancellation"
+  }]
+}

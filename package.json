@@ -14,6 +14,7 @@
   "author": "Simon Roy",
   "license": "ISC",
   "dependencies": {
+    "babel-core": "^6.8.0",
     "classnames": "^2.2.4",
     "immutable": "^3.7.6",
     "jquery": "2.1.4",

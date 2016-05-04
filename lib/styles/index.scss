@@ -5,7 +5,7 @@ $warning: #9f6000;
 $placeholderColor: #9f9f9f;
 @import './autocomplete';
 .form-group {
-  input[type='text'].form-control{
+  input[type='text'].form-control {
     padding: 0;
     float: none;
     border: 0;
@@ -15,11 +15,11 @@ $placeholderColor: #9f9f9f;
     border-bottom: 1px solid #757575;
   }
 }
-input[type='text'],
+input[type='date'],
+input[type='datetime-local'],
 input[type='number'],
 input[type='password'],
-input[type='date'],
-input[type='datetime-local'] {
+input[type='text'] {
   font-size: 1.2rem;
   height: 1.75rem;
   border-style: none;
@@ -34,11 +34,11 @@ textarea {
 }
 
 .form-group {
-  input[type='text'],
-  input[type='number'],
-  input[type='password'],
   input[type='date'],
   input[type='datetime-local'],
+  input[type='number'],
+  input[type='password'],
+  input[type='text'],
   textarea {
     border: 1px solid $light-gray-text;
     border-radius: 5px;
@@ -49,8 +49,8 @@ input[type='checkbox'],
 input[type='radio'] {
   zoom: 1.35;
 }
-select.mdl-textfield__input,
-label {
+label,
+select.mdl-textfield__input {
   font-size: 1.2rem;
   height: 1.75rem;
 }
